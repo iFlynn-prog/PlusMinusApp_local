@@ -1,0 +1,62 @@
+//    public void youTyred() {
+//        String action = "";
+//        System.out.println("Устал ? Желаешь закончить ? y/n");
+//        action = console.next();
+//        switch (action) {
+//            case "y":
+//                System.out.println("Выход в меню");
+//                ifCorrect = true;
+//                enterNumberLoop = true;
+//                StartMenuClass.startMenu();
+//                break;
+//            case "n":
+//                System.out.println("Продолжаем");
+//                enterNumberLoop = false;
+//                isPlus();
+//                break;
+//            default:
+//                System.out.println("Нужно ввести y/n");
+//                break;
+//        }
+//    }
+
+
+//            if (console.hasNextInt()) {
+//                System.out.printf("%d", answer);
+//
+//            }
+
+
+//        int n = 4;
+//        int result  = switch (n){
+//            case 1 -> 10;
+//            case 2 -> 1;
+//            case 3 -> 2;
+//            default -> {int a =5 ; yield n+a*2;}
+//        };
+//          Проверка выражения Switch
+//        System.out.println(result);
+
+
+
+//    public void ifCorrect(int result) {
+//        while (!ifCorrect) {
+////            try {
+//                System.out.println("Неправильно, попробуй еще раз: ");
+//                System.out.printf("%d + %d = ", firstNumber, secondNumber);
+//                plusAnswer = console.nextInt();
+////            } catch (InputMismatchException e) {
+////                System.out.println("Недопустимый ввод, нужно ввести число");
+////                isPlus();
+////            }
+//            if (plusAnswer.equals(result)) {
+//                System.out.println("Правильно!");
+//                ifCorrect = true;
+//                isPlus();
+//            }
+//        }
+//    }
+
+
+// firstNumber = (int) (Math.random() * 100 + 1);
+// secondNumber = (int) (Math.random() * 100 + 1);
