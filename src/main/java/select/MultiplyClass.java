@@ -10,22 +10,26 @@ public class MultiplyClass extends MainActionClass {
 
     public void isMultiply() {
         try {
-            int actionMultiplyResult;
             while (!multiplyNumberLoop) {
-                int multiplyResult;
+                int plusResult;
+
                 firstNumber = random.nextInt(NUMBER);
                 secondNumber = random.nextInt(NUMBER);
-                actionMultiplyResult = actionMultiply(firstNumber, secondNumber);
-                multiplyAnswer = console.nextInt();
+                plusResult = actionPlus(firstNumber, secondNumber);
 
-                if (multiplyAnswer.equals(actionMultiplyResult)) {
 
+
+
+                if (plusAnswer.equals(plusResult)) {
+                    System.out.println("Правильно!");
+
+                } else {
+                    checkCorrectAnswerAfterMistakes(plusResult);
                 }
             }
-
         } catch (InputMismatchException e) {
             System.out.println("Недопустимый ввод, используем цифры");
-            multiplyNumberLoop = true;
+            additionNumberLoop = true;
             MainApp.startMenu();
         }
     }
