@@ -2,6 +2,7 @@ package menu;
 
 import select.AdditionClass;
 import select.MainActionClass;
+import select.MultiplyClass;
 import select.SubtractionClass;
 
 import java.util.InputMismatchException;
@@ -18,6 +19,7 @@ public class MainApp {
         AdditionClass addition = new AdditionClass();
         SubtractionClass subtraction = new SubtractionClass();
         MainActionClass mainAction = new MainActionClass();
+        MultiplyClass multiply = new MultiplyClass();
 
 
         int choice = 0;
@@ -48,7 +50,7 @@ public class MainApp {
                         break;
                     case 3:
                         System.out.println("Примеры на умножение");
-                        System.out.println("В разработке");
+                        multiply.isMultiply();
                         startMenuLoop = true;
                         break;
                     case 4:

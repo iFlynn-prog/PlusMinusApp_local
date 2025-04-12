@@ -43,15 +43,14 @@ public class AdditionClass extends MainActionClass {
 
     public void checkCorrectAnswerAfterMistakes(int plusResult) {
         //Метод проверки правильности решения примера
-        BLOCK_CODE:
+        ADDITIONAL_BLOCK_CODE:
         while (!additionNumberLoopCheckCorrect) {
             System.out.println("Неправильно, попробуй еще раз: ");
             System.out.printf("%d + %d = ", firstNumber, secondNumber);
             plusAnswer = console.nextInt();
-
             if (plusAnswer.equals(plusResult)) {
                 System.out.println("Правильно!");
-                break BLOCK_CODE;
+                break ADDITIONAL_BLOCK_CODE;
             }
         }
     }
