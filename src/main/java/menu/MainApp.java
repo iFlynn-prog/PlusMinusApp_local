@@ -1,6 +1,7 @@
 package menu;
 
 import select.AdditionClass;
+import select.DivideClass;
 import select.MainActionClass;
 import select.SubtractionClass;
 
@@ -18,6 +19,7 @@ public class MainApp {
         AdditionClass addition = new AdditionClass();
         SubtractionClass subtraction = new SubtractionClass();
         MainActionClass mainAction = new MainActionClass();
+        DivideClass divide = new DivideClass();
 
 
         int choice = 0;
@@ -53,7 +55,7 @@ public class MainApp {
                         break;
                     case 4:
                         System.out.println("Примеры на деление");
-                        System.out.println("В разработке");
+                        divide.isDivide();
                         startMenuLoop = true;
                         break;
                     case 5:
