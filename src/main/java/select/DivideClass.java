@@ -6,11 +6,10 @@ import java.util.InputMismatchException;
 
 public class DivideClass extends MainActionClass {
     boolean divideNumberLoop = false;
-    int divideResult;
+    double divideResult;
 
     public void isDivide() {
         try {
-
             while (!divideNumberLoop) {
 
                 firstNumber = random.nextInt(NUMBER);
@@ -18,7 +17,7 @@ public class DivideClass extends MainActionClass {
 
                 divideResult = actionDivide(firstNumber, secondNumber);
                 System.out.printf("%d / %d = ", firstNumber, secondNumber);
-                divideAnswer = console.nextInt();
+                divideAnswer = console.nextDouble();
 
                 if (divideAnswer.equals(divideResult)) {
                     System.out.println("Правильно!");
@@ -35,13 +34,13 @@ public class DivideClass extends MainActionClass {
         }
     }
 
-    public void checkCorrectAnswerAfterMistakes(Integer divideAnswer) {
+    public void checkCorrectAnswerAfterMistakes(Double divideAnswer) {
         boolean divideCheckCorrect = false;
         DIVIDE_BLOCK_CODE:
         while (!divideCheckCorrect) {
             System.out.print("Неверно, попробуй еще раз \n");
             System.out.print("Введи правильный ответ: ");
-            divideAnswer = console.nextInt();
+            divideAnswer = console.nextDouble();
             if (divideAnswer.equals(divideResult)) {
                 System.out.println("Правильно ELSE");
                 break DIVIDE_BLOCK_CODE;

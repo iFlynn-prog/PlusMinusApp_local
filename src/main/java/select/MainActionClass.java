@@ -1,10 +1,12 @@
 package select;
 
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MainActionClass {
-    public Scanner console = new Scanner(System.in);
+    public Scanner console = new Scanner(System.in).useLocale(Locale.ENGLISH);
+    //* useLocale(Locale.ENGLISH) <-- чтобы разделитель был точка в дробях
     Random random = new Random();
 
     final int NUMBER = 10;
@@ -15,7 +17,7 @@ public class MainActionClass {
     Integer plusAnswer;
     Integer minusAnswer;
     Integer multiplyAnswer;
-    Integer divideAnswer;
+    Double divideAnswer;
 
     //Метод сложения
     public int actionPlus(int firstNumber, int secondNumber) {
@@ -39,8 +41,12 @@ public class MainActionClass {
         return firstNumber * secondNumber;
     }
 
-    public int actionDivide(int firstNumber, int secondNumber) {
-        return firstNumber / secondNumber;
+    public double actionDivide(double firstNumber, double secondNumber) {
+        double result = 0;
+        if (firstNumber % secondNumber ==  0) {
+            result = firstNumber / secondNumber;
+            return result;
+        }
     }
 
     // if-else Expression функции вычитания
